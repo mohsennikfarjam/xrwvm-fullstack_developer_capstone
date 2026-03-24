@@ -1,0 +1,52 @@
+Walkthrough - IBM Full Stack Software Developer Capstone Project
+
+This document summarizes the work completed for the Capstone Project.
+
+Project Overview
+The "Best Cars Dealership" application is a full-stack platform for managing car dealerships and user reviews. It features a Django backend, a React frontend, a Node.js/MongoDB microservice for dealership data, and a Python microservice for sentiment analysis.
+
+Accomplishments
+
+Module 1: Static Pages
+- Created realistic "About Us" and "Contact Us" pages using HTML, CSS, and Bootstrap.
+- Implemented a professional navigation bar across all pages.
+- Configured Django to serve these static templates correctly.
+
+Module 2: User Management
+- Implemented User Registration, Login, and Logout functionality in Django.
+- Created a robust React Register.jsx component with all required input fields.
+- Verified authentication endpoints using curl.
+
+Module 3: Backend Services
+- Developed Django models for CarMake and CarModel with proper relationships and validation.
+- Implemented the Node.js/Express service to manage dealership and review data using MongoDB.
+- Configured a Python/Flask microservice for sentiment analysis.
+
+Module 4: Dynamic Pages
+- Created React components for viewing all Dealers, individual Dealer details, and Dealer reviews.
+- Implemented the "Add Review" feature, allowing authenticated users to submit feedback.
+- Integrated sentiment analysis to display emotional tone for each review.
+
+Module 5: CI/CD & Deployment
+- Set up GitHub Actions for automated code linting using flake8.
+- Containerized the entire application using Docker and Docker Compose.
+- Authored Kubernetes deployment and service manifests for all components.
+
+Verification & Screenshots
+
+Admin Panel
+Admin Login
+Above: Django Admin dashboard showing the registered models.
+
+Admin Logout
+Above: Successful logout from the Django Admin panel.
+
+Terminal Outputs
+- djangoserver: djangoserver
+- loginuser: loginuser
+- logoutuser: logoutuser
+
+Final Task Summary
+- [x] All Module 1-5 tasks completed.
+- [x] Verified with rubric and verified all files.
+- [x] GitHub repository updated with all required files.

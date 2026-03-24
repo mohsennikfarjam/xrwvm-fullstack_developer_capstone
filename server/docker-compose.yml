@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  # MongoDB service
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    restart: always
+
+  # Node.js API service
+  mongoapp:
+    build: ./database
+    image: nodeapp
+    ports:
+      - 3030:3030
+    depends_on:
+      - mongo_db
+
+  # Sentiment Analyzer microservice
+  sentiment:
+    build: ./djangoapp/microservices
+    image: sentiment_analyzer
+    ports:
+      - 5050:5050
+
+  # Main Django application
+  djangoapp:
+    build: .
+    image: djangoproj
+    ports:
+      - 8000:8000
+    depends_on:
+      - mongoapp
+      - sentiment
+    environment:
+      - backend_url=http://mongoapp:3030
+      - sentiment_analyzer_url=http://sentiment:5050

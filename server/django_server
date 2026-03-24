@@ -1,0 +1,7 @@
+$ python manage.py runserver 0.0.0.0:8000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CTRL-BREAK.

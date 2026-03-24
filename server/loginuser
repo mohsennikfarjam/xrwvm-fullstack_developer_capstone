@@ -1,0 +1,2 @@
+$ curl -s -c cookies.txt -H "Content-Type: application/json" -X POST http://localhost:8000/login -d '{"userName":"testuser","password":"TestPass123!"}'
+{"userName": "testuser", "status": "Authenticated"}

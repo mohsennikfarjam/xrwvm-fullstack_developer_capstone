@@ -1,0 +1,2 @@
+$ curl -s -b cookies.txt http://localhost:8000/logout
+{"userName": ""}
